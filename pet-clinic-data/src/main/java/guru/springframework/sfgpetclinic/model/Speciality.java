@@ -1,6 +1,13 @@
 package guru.springframework.sfgpetclinic.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "speciality")
 public class Speciality extends BaseEntity {
+    @Column(name = "descriptiont")
+    private String description;
+
     public String getDescription() {
         return description;
     }
@@ -9,5 +16,4 @@ public class Speciality extends BaseEntity {
         this.description = description;
     }
 
-    private String description;
 }
