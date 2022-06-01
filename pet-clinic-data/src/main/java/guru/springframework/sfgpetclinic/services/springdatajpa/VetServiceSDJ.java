@@ -3,7 +3,6 @@ package guru.springframework.sfgpetclinic.services.springdatajpa;
 import guru.springframework.sfgpetclinic.model.Vet;
 import guru.springframework.sfgpetclinic.repositories.VetRepository;
 import guru.springframework.sfgpetclinic.services.VetService;
-import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
@@ -31,13 +30,13 @@ public class VetServiceSDJ implements VetService {
     }
 
     @Override
-    public Vet save(Vet object) {
-        return vetRepository.save(object);
+    public Vet save(Vet vet) {
+        return vetRepository.save(vet);
     }
 
     @Override
-    public void delete(Vet object) {
-        vetRepository.save(object);
+    public void delete(Vet vet) {
+        vetRepository.save(vet);
     }
 
     @Override

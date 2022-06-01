@@ -3,11 +3,15 @@ package guru.springframework.sfgpetclinic.services.springdatajpa;
 import guru.springframework.sfgpetclinic.model.Speciality;
 import guru.springframework.sfgpetclinic.repositories.SpecialityRepository;
 import guru.springframework.sfgpetclinic.services.SpecialityService;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
+@Service
+@Profile("springdatajpa")
 public class SpecialityServiceSDJ implements SpecialityService {
     private final SpecialityRepository specialityRepository;
 
@@ -26,13 +30,13 @@ public class SpecialityServiceSDJ implements SpecialityService {
     }
 
     @Override
-    public Speciality save(Speciality object) {
-        return specialityRepository.save(object);
+    public Speciality save(Speciality speciality) {
+        return specialityRepository.save(speciality);
     }
 
     @Override
-    public void delete(Speciality object) {
-        specialityRepository.delete(object);
+    public void delete(Speciality speciality) {
+        specialityRepository.delete(speciality);
     }
 
     @Override

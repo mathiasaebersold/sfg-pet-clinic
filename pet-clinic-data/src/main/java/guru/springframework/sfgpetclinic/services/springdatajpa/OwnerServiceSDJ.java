@@ -3,7 +3,6 @@ package guru.springframework.sfgpetclinic.services.springdatajpa;
 import guru.springframework.sfgpetclinic.model.Owner;
 import guru.springframework.sfgpetclinic.repositories.OwnerRepository;
 import guru.springframework.sfgpetclinic.services.OwnerService;
-import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
@@ -31,13 +30,13 @@ public class OwnerServiceSDJ implements OwnerService {
     }
 
     @Override
-    public Owner save(Owner object) {
-        return ownerRepository.save(object);
+    public Owner save(Owner owner) {
+        return ownerRepository.save(owner);
     }
 
     @Override
-    public void delete(Owner object) {
-        ownerRepository.delete(object);
+    public void delete(Owner owner) {
+        ownerRepository.delete(owner);
 
     }
 
